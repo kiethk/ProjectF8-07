@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #936cdd;
+    --bg-color: #fff8f3;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading-1 {
+    color: #201830;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 114.286%;
+}
+
+.heading-2 {
+    @extend .heading-1;
+    font-size: 4.2rem;
+    line-height: 123.81%;
+}
+
+.desc-1 {
+    color: #665f73;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 166.667%;
+}
+
+.desc-2 {
+    @extend .desc-1;
+    font-size: 1.6rem;
+    line-height: 175%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 17px 27px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 166.667%;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: #fff;
+        color: var(--primary-color);
+    }
+}
