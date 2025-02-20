@@ -1,0 +1,106 @@
+.popular {
+    background: var(--bg-color);
+    margin-top: 160px;
+    padding: 100px 0;
+
+    .heading-strong {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            display: inline-block;
+            position: absolute;
+            z-index: -1;
+            content: url(../../assets/img/popular__heading-strong.svg);
+            left: 6px;
+            bottom: -16px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        display: inline-block;
+        max-width: 390px;
+    }
+
+    &__list {
+        margin-top: 104px;
+
+        .col-lg-6:nth-of-type(3),
+        .col-lg-6:nth-of-type(4) {
+            .popular__img {
+                order: 2;
+            }
+
+            .popular__item-content {
+                order: 1;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-content {
+            width: calc(50% - 15px);
+        }
+        &-timing {
+            color: #fd6f1f;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 171.429%;
+        }
+        &-title {
+            margin-top: 6px;
+            color: #201830;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 150%;
+        }
+        &-desc {
+            margin-top: 18px;
+            color: #665f73;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 175%;
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 11px;
+            color: #201830;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 171.429%;
+
+            .popular__play-buttom {
+                margin-left: 6px;
+                color: #201830;
+            }
+
+            &:hover {
+                color: var(--primary-color);
+                .popular__play-buttom {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: calc(50% - 15px);
+        border-radius: 8px;
+    }
+
+    &__dots {
+        justify-content: center;
+        margin: 57px 0 0;
+    }
+}

@@ -1,0 +1,103 @@
+.category {
+    margin-top: 160px;
+
+    .row {
+        & > *:first-child {
+            .category-card {
+                bottom: -315px;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading__strong {
+        position: relative;
+
+        &::after {
+            display: inline-block;
+            position: absolute;
+            left: -6px;
+            bottom: -18px;
+            z-index: -1;
+            content: url(../../assets/img/category__heading-strong.svg);
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        max-width: 470px;
+        text-align: center;
+    }
+
+    &__list {
+        margin-top: 70px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__item {
+        position: relative;
+        height: 285px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 0 0 8px 8px;
+        padding: 16px 24px;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+
+        &:hover {
+            backdrop-filter: blur(0);
+        }
+
+        &__title {
+            display: inline-flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 166.667%;
+
+            &::after {
+                margin-left: 8px;
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                content: "";
+                background-image: url(../../assets/img/category__icon-arrow.svg);
+            }
+        }
+
+        &__desc {
+            display: inline;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 171.429%;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: max-content;
+        margin: 55px auto 0;
+    }
+}
