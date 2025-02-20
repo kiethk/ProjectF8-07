@@ -8,6 +8,9 @@
         <!-- Link css -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
+        <!-- Link Responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+
         <!-- Link GG Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,11 +121,13 @@
                     </a>
 
                     <!-- Navbar PC -->
-                    <nav class="navbar__list">
+                    <nav class="navbar__list hide-on-tablet-mobile">
                         <a href="#popular" class="navbar__item">Episodes</a>
                         <a href="#directory" class="navbar__item">Trending</a>
                         <span class="header__category-box">
-                            <a href="#category" class="navbar__item">Category</a>
+                            <a href="#category" class="navbar__item"
+                                >Category</a
+                            >
                             <input
                                 type="checkbox"
                                 name="header__category-checkbox"
@@ -163,9 +168,43 @@
                     </nav>
 
                     <!-- Header action -->
-                    <div class="header__action">
+                    <div class="header__action hide-on-tablet-mobile">
                         <a href="#!" class="log-in">Log in</a>
                         <a href="#!" class="btn header__btn">Sign up</a>
+                    </div>
+
+                    <!-- Menu Tablet and Mobile -->
+                    <input
+                        type="checkbox"
+                        name="header__checkbox"
+                        id="header__checkbox"
+                        class="header__checkbox"
+                        hidden
+                    />
+                    <label for="header__checkbox" class="hide-on-pc">
+                        <img
+                            src="./assets/img/header__icon-menu.svg"
+                            alt=""
+                            class="header__menu-icon hide-on-pc"
+                        />
+                    </label>
+
+                    <label
+                        for="header__checkbox"
+                        class="overlay hide-on-pc"
+                    ></label>
+
+                    <div class="menu__list hide-on-pc">
+                        <a href="#!" class="menu__item">Episodes</a>
+                        <a href="#!" class="menu__item">Trending</a>
+                        <a href="#!" class="menu__item">Category</a>
+                        <a href="#!" class="menu__item">Blog</a>
+
+                        <div class="menu-separate"></div>
+                        <div class="menu__action">
+                            <a href="#!" class="menu__logIn">Log in</a>
+                            <a href="#!" class="menu__signUp">Sign up</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,7 +217,7 @@
                     <div class="hero__inner">
                         <div class="row">
                             <!-- Hero Media -->
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-12">
                                 <div class="header__media">
                                     <img
                                         src="./assets/img/hero__media.svg"
@@ -189,7 +228,7 @@
                             </div>
 
                             <!-- Hero Content -->
-                            <div class="col-lg-5 offset-lg-1">
+                            <div class="col-lg-5 offset-lg-1 col-12">
                                 <div class="header__content">
                                     <h1 class="heading-1 hero__heading">
                                         A new era of
@@ -225,7 +264,7 @@
                 <div class="container">
                     <div class="directory__inner">
                         <div class="row">
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 col-12">
                                 <div class="directory__content">
                                     <h2 class="heading-2 directory__heading">
                                         We are in the top podcast
@@ -247,7 +286,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 offset-lg-1">
+                            <div class="col-lg-6 offset-lg-1 col-12">
                                 <div class="directory__media">
                                     <img
                                         src="./assets/img/directory__img.svg"
@@ -280,7 +319,7 @@
                         <div class="category__list">
                             <div class="row">
                                 <!-- Item 1 -->
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <figure class="category__item">
                                         <img
                                             src="./assets/img/category__item1.svg"
@@ -301,7 +340,7 @@
                                 </div>
 
                                 <!-- Item 2 -->
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 col-12">
                                     <figure class="category__item">
                                         <img
                                             src="./assets/img/category__item2.svg"
@@ -322,7 +361,7 @@
                                 </div>
 
                                 <!-- Item 3 -->
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-12">
                                     <figure class="category__item">
                                         <img
                                             src="./assets/img/category__item3.svg"
@@ -343,7 +382,7 @@
                                 </div>
 
                                 <!-- Item 4 -->
-                                <div class="col-lg-3 offset-lg-4">
+                                <div class="col-lg-3 offset-lg-4 col-12">
                                     <figure class="category__item">
                                         <img
                                             src="./assets/img/category__item4.svg"
@@ -364,7 +403,7 @@
                                 </div>
 
                                 <!-- Item 5 -->
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 col-12">
                                     <figure class="category__item">
                                         <img
                                             src="./assets/img/category__item5.svg"
@@ -404,7 +443,10 @@
                                 <span class="heading-strong">popular</span>
                                 episodes
                             </h2>
-                            <a href="#!" class="btn-dark popular__btn">
+                            <a
+                                href="#!"
+                                class="btn-dark popular__btn hide-on-tablet-mobile"
+                            >
                                 All episodes
                             </a>
                         </div>
@@ -413,7 +455,7 @@
                         <div class="popular__list">
                             <div class="row">
                                 <!-- Popular Item 1 -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <div class="popular__item">
                                         <img
                                             src="./assets/img/popular__img1.svg"
@@ -463,7 +505,7 @@
                                 </div>
 
                                 <!-- Popular Item 2 -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <div class="popular__item">
                                         <img
                                             src="./assets/img/popular__img2.svg"
@@ -513,7 +555,7 @@
                                 </div>
 
                                 <!-- Popular Item 3 -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <div class="popular__item">
                                         <img
                                             src="./assets/img/popular__img3.svg"
@@ -563,7 +605,7 @@
                                 </div>
 
                                 <!-- Popular Item 4 -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <div class="popular__item">
                                         <img
                                             src="./assets/img/popular__img4.svg"
@@ -618,6 +660,10 @@
                             <a href="#!" class="dot"></a>
                             <a href="#!" class="dot"></a>
                         </div>
+
+                        <a href="#!" class="btn-dark popular__btn hide-on-pc">
+                            All episodes
+                        </a>
                     </div>
                 </div>
             </section>
@@ -627,7 +673,7 @@
                 <div class="container">
                     <div class="listener__inner">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-12">
                                 <div class="listener__media">
                                     <img
                                         src="./assets/img/listener__img1.svg"
@@ -647,7 +693,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-5 offset-lg-1">
+                            <div class="col-lg-5 offset-lg-1 col-12">
                                 <div class="listener__content">
                                     <img
                                         src="./assets/img/quote-img.svg"
@@ -727,7 +773,7 @@
                     <div class="cta__inner">
                         <!-- Cta Top -->
                         <div class="row">
-                            <div class="col-lg-5 offset-lg-1">
+                            <div class="col-lg-5 offset-lg-1 col-12">
                                 <h2 class="heading-2 cta__heading">
                                     Subscribe and get
                                     <span class="heading__strong">update</span>
@@ -735,7 +781,7 @@
                                 </h2>
                             </div>
 
-                            <div class="col-lg-5">
+                            <div class="col-lg-5 col-12">
                                 <p class="desc-2 cta__desc">
                                     Rebuilt for simplicity and speed, so you can
                                     spend more time discovering and listening to
@@ -748,7 +794,7 @@
                         <!-- Cta bottom -->
                         <form action="" method="post" class="cta__form">
                             <div class="row">
-                                <div class="col-lg-4 offset-lg-1">
+                                <div class="col-lg-4 offset-lg-1 col-12">
                                     <input
                                         type="text"
                                         name="cta__name"
@@ -758,7 +804,7 @@
                                     />
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <input
                                         type="email"
                                         name="cta__email"
@@ -768,7 +814,7 @@
                                     />
                                 </div>
 
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 col-12">
                                     <input
                                         type="submit"
                                         value="Subscribe"
@@ -803,7 +849,7 @@
             <div class="container">
                 <div class="footer__inner">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-12">
                             <!-- Logo -->
                             <a href="#" class="logo__link">
                                 <img
@@ -830,7 +876,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-12">
                             <div class="footer__list-box">
                                 <!-- List 1 -->
                                 <div class="footer__list">
@@ -882,48 +928,47 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-12">
                             <h3 class="footer__title">Listen on</h3>
                             <div class="footer__listen-box">
                                 <a href="#!" class="footer__listen-link">
-                                          <img
-                                              src="./assets/img/footer__listen1.svg"
-                                              alt=""
-                                              class="footer__listen-item"
-                                          />
+                                    <img
+                                        src="./assets/img/footer__listen1.svg"
+                                        alt=""
+                                        class="footer__listen-item"
+                                    />
                                 </a>
                                 <a href="#!" class="footer__listen-link">
-                                        <img
-                                            src="./assets/img/footer__listen2.svg"
-                                            alt=""
-                                            class="footer__listen-item"
-                                        />
-                              </a>
+                                    <img
+                                        src="./assets/img/footer__listen2.svg"
+                                        alt=""
+                                        class="footer__listen-item"
+                                    />
+                                </a>
 
-                              <a href="#!" class="footer__listen-link">
-                                        <img
-                                            src="./assets/img/footer__listen3.svg"
-                                            alt=""
-                                            class="footer__listen-item"
-                                        />
-                              </a>
+                                <a href="#!" class="footer__listen-link">
+                                    <img
+                                        src="./assets/img/footer__listen3.svg"
+                                        alt=""
+                                        class="footer__listen-item"
+                                    />
+                                </a>
 
-                              <a href="#!" class="footer__listen-link">
-                                        <img
-                                            src="./assets/img/footer__listen4.svg"
-                                            alt=""
-                                            class="footer__listen-item"
-                                        />
-                              </a>
+                                <a href="#!" class="footer__listen-link">
+                                    <img
+                                        src="./assets/img/footer__listen4.svg"
+                                        alt=""
+                                        class="footer__listen-item"
+                                    />
+                                </a>
 
-                              <a href="#!" class="footer__listen-link">
-                                        <img
-                                            src="./assets/img/footer__listen5.svg"
-                                            alt=""
-                                            class="footer__listen-item"
-                                        />
-                              </a>
-                                
+                                <a href="#!" class="footer__listen-link">
+                                    <img
+                                        src="./assets/img/footer__listen5.svg"
+                                        alt=""
+                                        class="footer__listen-item"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>

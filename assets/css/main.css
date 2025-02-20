@@ -1119,8 +1119,15 @@ a {
 }
 .directory__img {
   position: absolute;
-  top: -248px;
-  left: -135px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.directory .category__item {
+  width: max-content;
+}
+.directory .category__img {
+  width: auto;
 }
 
 .category {
@@ -1321,7 +1328,7 @@ a {
   z-index: 2;
   position: absolute;
 }
-.listener .listener__dots {
+.listener__dots {
   position: absolute;
   bottom: 0;
   left: 74px;
@@ -1486,10 +1493,12 @@ a {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: hidden;
   font-size: 1.6rem;
   font-family: "Plus Jakarta Sans";
 }

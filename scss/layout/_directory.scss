@@ -41,7 +41,18 @@
 
     &__img {
         position: absolute;
-        top: -248px;
-        left: -135px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .category {
+        &__item {
+            width: max-content;
+        }
+
+        &__img {
+            width: auto;
+        }
     }
 }
